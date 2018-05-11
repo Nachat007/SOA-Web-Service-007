@@ -35,7 +35,7 @@
 
 </head>
 
-<body>
+<body background="img/banner-bg.jpg">
     <header id="header" id="home">
         <div class="header-top">
             <div class="container">
@@ -57,20 +57,15 @@
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                       
                         <li>
-                                <a href="Register.html">Register</a>
+                            <a href="index.html">Back</a>
+                        </li>
+                        
+                        <li>
+                            <a href="index2.html">Without Member</a>
                         </li>
 
-                        <li>
-                                <a href="Login.html">Login</a>
-                        </li>
-                        
-                        <li>
-                                <a href="index2.html">Without Member</a>
-                        </li>
-                        
-                       
+
                     </ul>
                 </nav>
                 <!-- #nav-menu-container -->
@@ -79,43 +74,45 @@
     </header>
     <!-- #header -->
 
-    <!-- start banner Area -->
-    <section class="banner-area relative" id="home">
-        <div class="overlay overlay-bg"></div>
-        <div class="container">
-            <div class="row fullscreen d-flex justify-content-center align-items-center">
-                <div class="banner-content col-lg-9 col-md-12 justify-content-center ">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <h1>
-                        Welcome to
-                        <br>
-                        <br>
-                        <img src="img/logo.png" />
-                        <br>
-                    </h1>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <a href="Login.html" class="primary-btn header-btn text-uppercase mt-5">Login</a> &ensp;&ensp;
-                    <a href="Register.html" class="primary-btn header-btn text-uppercase mt-5">Register</a> &ensp;&ensp;
-                    <a href="index2.html" class="primary-btn header-btn text-uppercase mt-5">Without Member</a>
-                   
-                </div>
+    <!-- Start Catalogue Area -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h1 class="display-3">
+            <font color="white">Be a Member</font>
+        </h1>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+            <label for="title">Email:</label>
+            <input type="text" class="form-control" id="mail">
+        </div>
+        <div class="form-group">
+            <label for="title"> Password: </label>
+           <br><input type="password" value="FakePSW" id="pass"><br><br>
+            </div>
+        
+        <div class="form-group">
+            <button id="Regis" class="btn btn-primary">Register</button>
+            <a href="index.html" class="btn btn-default">Cancel</a>
+        </div>
+        <div class="form-group">
+            <div id="alert" class="alert alert-success alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Success!</strong> Product was added
             </div>
         </div>
-    </section>
-    <!-- End banner Area -->
+    </div>
+    <!-- End gallery Area -->
 
-   
 
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -131,7 +128,7 @@
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/mail-script.js"></script>
     <script src="js/main.js"></script>
-    <script src="index.js"></script>
+    <script src="Register.js"></script>
 </body>
 
 </html>

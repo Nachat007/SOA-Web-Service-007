@@ -16,13 +16,13 @@ $(function () {
 
     $('#alert').hide();
 
-    var sid = getUrlParameter('User_id');
+    var sid = getUrlParameter('id');
 
     $.ajax({
 
         
         type: 'GET',
-        url: "http://servicelogistics20180505020236.azurewebsites.net/Api/Logistics" + sid,
+        url: "http://servicelogistics20180505020236.azurewebsites.net/Api/Logistics/" + sid,
 
     }).then(function (data) {
 
@@ -50,7 +50,7 @@ $(function () {
 
           
             type: 'PUT',
-            url: "http://servicelogistics20180505020236.azurewebsites.net/Api/Logistics" + sid,
+            url: "http://servicelogistics20180505020236.azurewebsites.net/Api/Logistics/" + sid,
             data: formdata,
 
 
@@ -74,7 +74,7 @@ $(function () {
 
             //CP5. Complete Ajax code to DELETE the selected pin (pinid)  
             type: 'DELETE',
-            url: "http://servicelogistics20180505020236.azurewebsites.net/Api/Logistics" + sid,
+            url: "http://servicelogistics20180505020236.azurewebsites.net/Api/Logistics/" + sid,
 
 
         }).then(function (data) {
