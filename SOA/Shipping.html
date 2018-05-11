@@ -32,10 +32,18 @@
     <!--
         Style
         ============================================= -->
-
+      <style>
+        div.transbox {
+            margin: 30px;
+            background-color: #ffffff;
+            opacity: 0.9;
+            filter: alpha(opacity=5); /* For IE8 and earlier */
+          }
+      </style>    
 </head>
 
-<body background="img/banner-bg.jpg">
+
+<body  background="img/banner-bg.jpg" bgproperties="fixed">
     <header id="header" id="home">
         <div class="header-top">
             <div class="container">
@@ -44,10 +52,10 @@
                         <a href="tel:0830050459">083-0050459</a>|&ensp;
                         <a href="mailto:loveless_liion@outlook.com">loveless_liion@outlook.com</a>
                     </div>
-
                 </div>
             </div>
         </div>
+       
         <div class="container main-menu">
             <div class="row align-items-center justify-content-between d-flex">
                 <div id="logo">
@@ -57,75 +65,61 @@
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                        <li>
+                        <li >
                             <a href="index.html">Home</a>
                         </li>
-                        <li>
-                            <a href="Catalogue.html">All Products</a>
-                        </li>
-                        <li>
-                            <a href="Sell.html">Sell</a>
-                        </li>
-                        <li>
-                            <a href="Edit.html">Edit Product</a>
-                        </li>
 
 
+                        <li>
+                                <a href="Sell.html">Sell</a>
+                        </li>
+
+                        <li>
+                                <a href="Edit.html">Edit Products</a>
+                        </li>
+
+                        
+                        
                     </ul>
                 </nav>
                 <!-- #nav-menu-container -->
             </div>
         </div>
+   
     </header>
     <!-- #header -->
-
-    <!-- Start Catalogue Area -->
+    <!-- #header -->
     <br>
     <br>
     <br>
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <div class="container">
-        <h1 class="display-3">
-            <font color="white">Add New Product</font>
-        </h1>
-        <div class="form-group">
-            <label for="name">Photo(URL Only):</label>
-            <input type="text" class="form-control" id="photo">
-        </div>
-        <div class="form-group">
-            <label for="title">Product Name:</label>
-            <input type="text" class="form-control" id="name">
-        </div>
-        <div class="form-group">
-            <label for="desc">Description:</label>
-            <input type="text" class="form-control" id="desc">
-        </div>
-        <div class="form-group">
-            <label for="Price">Price:</label>
-            <input type="text" class="form-control" id="price">
-        </div>
-        <div class="form-group">
-            <button id="sell" class="btn btn-primary">Sell</button>
-            <a href="index.html" class="btn btn-default">Cancel</a>
-        </div>
-        <div class="form-group">
-            <div id="alert" class="alert alert-success alert-dismissible fade show">
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <strong>Success!</strong> Product was added
-            </div>
-        </div>
-    </div>
-    <!-- End gallery Area -->
-
-
-
-
-
-
+    
+    <div class="transbox">
+        <br>
+        <br>
+            <div class="container">
+                    <center>
+                        <h2><font color="black">Shipped list</font></h2>
+                    </center>
+                    <br>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Address</th>
+                                <th>Price</th>
+                                <th>Amount</th>
+                                <th>Delivery Type</th>
+                                <th>Manage</th>
+                               
+            
+                            </tr>
+                        </thead>
+                  <tbody id="Ship"></tbody>
+                    
+                </table>
+                </div>
 
 
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
@@ -142,7 +136,8 @@
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/mail-script.js"></script>
     <script src="js/main.js"></script>
-    <script src="Sell.js"></script>
+    
+    <script src="Shipping.js"></script>
 </body>
 
 </html>

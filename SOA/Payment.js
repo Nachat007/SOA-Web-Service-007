@@ -36,13 +36,10 @@ $(function () {
 
     });
 
-    var row = '<tr><td><img src=" ' + ('#photo') + ' " width="70px" height="70px">' + '</td></tr>';
-    $('#photo').append(row);
-
     $('#save').click(function () {
 
         var formdata = {
-            orderId: $('#ID').val(),
+            
             price: $('#price').val(),
 
         }
@@ -51,7 +48,7 @@ $(function () {
 
         $.ajax({
 
-            //CP4. Complete Ajax code to UPDATE the selected pin (pinid)  
+           
             type: 'POST',
             url: "https://api-payment.herokuapp.com/api/payment/new",
             data: formdata,

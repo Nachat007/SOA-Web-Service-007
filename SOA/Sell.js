@@ -16,7 +16,7 @@ $(function(){
         
         $.ajax({
 
-            //CP2. Complete Ajax Code to INSERT new pin data 
+            
             type: 'POST',
             url: "https://soaproductapi.herokuapp.com/products",
             data:formdata,

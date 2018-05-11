@@ -2,7 +2,7 @@ $(function () {
     $.ajax({
         type: 'GET',
         url: "https://soaproductapi.herokuapp.com/products"
-        //CP1. Complete Ajax Code to GET ALL pin data 
+        
 
     }).then(function (data) {
 

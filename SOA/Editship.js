@@ -16,41 +16,41 @@ $(function () {
 
     $('#alert').hide();
 
-    var pid = getUrlParameter('id');
+    var sid = getUrlParameter('User_id');
 
     $.ajax({
 
         
         type: 'GET',
-        url: "https://soaproductapi.herokuapp.com/products/" + pid,
+        url: "http://servicelogistics20180505020236.azurewebsites.net/Api/Logistics" + sid,
 
     }).then(function (data) {
 
-        $('#photo').val(data.photo);
-        $('#name').val(data.name);
-        $('#desc').val(data.description);
-        $('#price').val(data.price);
+        $('#add').val(data.Address);
+        $('#price').val(data.Price);
+        $('#amount').val(data.Amount);
+        $('#Del').val(data.Delivery_type);
 
 
 
     });
 
-    $('#saveni').click(function () {
+    $('#savens').click(function () {
 
         var formdata = {
-            photo: $('#photo').val(),
-            name: $('#name').val(),
-            description: $('#desc').val(),
-            price: $('#price').val(),
+            Address: $('#add').val(),
+            Price: $('#price').val(),
+            Amount: $('#amount').val(),
+            Delivery_type: $('#Del').val(),
         }
 
         console.log(formdata);
 
         $.ajax({
 
-            //CP4. Complete Ajax code to UPDATE the selected pin (pinid)  
+          
             type: 'PUT',
-            url: "https://soaproductapi.herokuapp.com/products/" + pid,
+            url: "http://servicelogistics20180505020236.azurewebsites.net/Api/Logistics" + sid,
             data: formdata,
 
 
@@ -62,7 +62,7 @@ $(function () {
 
         }).then(function (data) {
 
-            window.location.href = 'Edit.html';
+            window.location.href = 'Shipping.html';
 
         });
 
@@ -74,12 +74,12 @@ $(function () {
 
             //CP5. Complete Ajax code to DELETE the selected pin (pinid)  
             type: 'DELETE',
-            url: "https://soaproductapi.herokuapp.com/products/" + pid,
+            url: "http://servicelogistics20180505020236.azurewebsites.net/Api/Logistics" + sid,
 
 
         }).then(function (data) {
 
-            window.location.href = 'Edit.html';
+            window.location.href = 'Shipping.html';
 
         });
     });
